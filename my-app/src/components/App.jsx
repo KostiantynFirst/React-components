@@ -1,5 +1,5 @@
-import { PageTitle } from "./PageTitle/PageTitle";
+import { PageTitle } from "components/PageTitle/PageTitle";
 
 export const App = () => {
-  return <div>{Pagetitle} </div>
+  return (<div><PageTitle text="24th Core Worlds Coalition Conference " /> </div>);
 };
