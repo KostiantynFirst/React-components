@@ -1,5 +1,5 @@
 export const iconSize = Object.freeze({
-    sm: 24,
+    sm: 16,
     md: 24,
     lg: 32
 })
