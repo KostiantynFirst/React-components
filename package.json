@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "date-fns": "^2.29.3",
     "prop-types": "^15.8.1",
     "react-icons": "^4.8.0"
