@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 
 export const Card = styled.div`
     position: relative;
-    border: 2px dashed black;
-    padding: 8px;
+    border: ${props => `2px dashed ${props.theme.colors.black}`};
+    padding: ${props => props.theme.spacing(2)};
     border-radius: 4px;
 `;
 
@@ -21,12 +21,19 @@ export const Info = styled.p`
     align-items: center;
     margin-top: 0;
     margin-bottom: 8px;
-    color: var(--color-primary-text);
+    color: ${props => props.theme.colors.primaryText};
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     letter-spacing: 0.25px;
+
+    svg {
+        display: block;
+        margin-right: 8px;
+        color: ${props => props.theme.colors.secondaryText};
+    }
 `;
+
 
 export const Chip = styled.span`
     position: absolute;
@@ -35,19 +42,18 @@ export const Chip = styled.span`
     padding: 4px 8px;
     border-radius: 4px;
     text-transform: uppercase;
-    color: #fff;
-
-    background-color: ${props => {
-        switch (props.eventType) {
+    color: ${props => props.theme.colors.white};
+    background-color: ${({eventType, theme}) => {
+        // console.log(theme.theme);
+        switch (eventType) {
             case 'free':
-                return 'var(--color-green)';
+                return theme.colors.green;
             case 'paid': 
-                return 'var(--color-blue)';
+                return theme.colors.blue;
             case 'vip': 
-                return 'var(--color-red)';
-                default: 
-                return '#000';
-
+                return theme.colors.red;
+            default: 
+                return <theme className="colors black"></theme>;
         }
-    }}
+    }};
 `;

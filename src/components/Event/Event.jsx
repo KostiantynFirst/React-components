@@ -1,6 +1,5 @@
 import {FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock} from 'react-icons/fa'
 import PropTypes from 'prop-types';
-import css from './Event.module.css'
 import { iconSize } from "constants";
 import { formatEventStart, formatEventDuration } from "utils";
 import { Card, EventName, Info, Chip } from "./Event.styled";
@@ -9,19 +8,19 @@ export const Event = ({name, location, speaker, type, start, end}) => {
     return <Card>
     <EventName>{name}</EventName>
     <Info>
-      <FaMapMarkerAlt className={css.icon} size={iconSize.sm}/>
+      <FaMapMarkerAlt size={iconSize.sm}/>
       {location}
     </Info>
     <Info>
-      <FaUserAlt className={css.icon} size={iconSize.sm}/>
+      <FaUserAlt size={iconSize.sm}/>
       {speaker}
     </Info>
     <Info>
-      <FaCalendarAlt className={css.icon} size={iconSize.sm}/>
+      <FaCalendarAlt size={iconSize.sm}/>
       {formatEventStart(start)}
     </Info>
     <Info>
-      <FaClock className={css.icon} size={iconSize.sm}/>
+      <FaClock size={iconSize.sm}/>
       {formatEventDuration(start, end)}
     </Info>
     <Chip eventType={type}>{type}</Chip>
