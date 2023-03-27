@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "react-components",
   "version": "0.1.0",
-  "homepage": "https://kostiantynfirst.github.io/React-components/",
   "private": true,
+  "homepage": "https://kostiantynfirst.github.io/react-components/",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
