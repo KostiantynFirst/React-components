@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from "@emotion/react";
 import './index.css';
